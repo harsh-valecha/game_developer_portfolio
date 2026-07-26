@@ -11,6 +11,7 @@ test('contact form submission - valid', async ({ page }) => {
   await page.goto('/contact');
   await page.fill('input[name="name"]', 'Test User');
   await page.fill('input[name="email"]', 'test@example.com');
+  await page.fill('input[name="subject"]', 'Test Subject');
   await page.fill('textarea[name="message"]', 'Hello world');
   await page.click('button[type="submit"]');
   
