@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | GameDev Portfolio{% endblock %}
+
+{% block content %}
+<section class="max-w-4xl mx-auto px-6 py-20">
+    <div class="text-center mb-16" data-aos="fade-up">
+        <h1 class="text-5xl font-bold tracking-tight mb-4">Get In Touch</h1>
+        <p class="text-gray-500">Have a project in mind or just want to say hi? I'd love to hear from you.</p>
+    </div>
+
+    <div class="bg-white border border-gray-100 rounded-3xl p-8 md:p-12 shadow-sm" data-aos="fade-up">
+        <form action="/contact" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex flex-col">
+                <label class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2 ml-1">Full Name</label>
+                <input type="text" name="name" required class="px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black transition-all" placeholder="John Doe">
+            </div>
+            <div class="flex flex-col">
+                <label class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2 ml-1">Email Address</label>
+                <input type="email" name="email" required class="px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black transition-all" placeholder="john@example.com">
+            </div>
+            <div class="flex flex-col md:col-span-2">
+                <label class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2 ml-1">Subject</label>
+                <input type="text" name="subject" required class="px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black transition-all" placeholder="Project Inquiry">
+            </div>
+            <div class="flex flex-col md:col-span-2">
+                <label class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2 ml-1">Message</label>
+                <textarea name="message" rows="5" required class="px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black transition-all" placeholder="Tell me about your project..."></textarea>
+            </div>
+            <div class="md:col-span-2 text-center mt-4">
+                <button type="submit" class="btn-primary px-12 py-4 rounded-full font-medium text-lg w-full md:w-auto">
+                    Send Message
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

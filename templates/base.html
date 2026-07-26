@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}GameDev Portfolio{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcfc;
+            color: #2d3436;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, .nav-link {
+            font-family: 'Outfit', sans-serif;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .btn-primary {
+            background: #000;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .project-card:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold tracking-tighter text-black">
+                G<span class="text-gray-400">.</span>DEV
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="/" class="nav-link text-sm font-medium hover:text-gray-500 transition-colors">Home</a>
+                <a href="/projects" class="nav-link text-sm font-medium hover:text-gray-500 transition-colors">Projects</a>
+                <a href="/about" class="nav-link text-sm font-medium hover:text-gray-500 transition-colors">About</a>
+                <a href="/blog" class="nav-link text-sm font-medium hover:text-gray-500 transition-colors">DevLog</a>
+                <a href="/contact" class="btn-primary px-5 py-2 rounded-full text-sm font-medium">Contact</a>
+            </div>
+            <!-- Mobile Menu Toggle (Simplified) -->
+            <div class="md:hidden text-2xl">☰</div>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="fixed top-24 right-6 z-50">
+              {% for message in messages %}
+                <div class="bg-black text-white px-6 py-3 rounded-lg shadow-lg animate-bounce">
+                    {{ message }}
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+        
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-white border-t border-gray-100 py-12 mt-20">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-gray-400 text-sm">
+                &copy; 2024 Game Developer Portfolio. Built with Flask & Tailwind.
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-black transition-colors">Twitter</a>
+                <a href="#" class="text-gray-400 hover:text-black transition-colors">GitHub</a>
+                <a href="#" class="text-gray-400 hover:text-black transition-colors">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-cubic'
+        });
+    </script>
+</body>
+</html>

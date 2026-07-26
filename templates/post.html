@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} | DevLog{% endblock %}
+
+{% block content %}
+<section class="max-w-3xl mx-auto px-6 py-20">
+    <div class="mb-12" data-aos="fade-up">
+        <a href="/blog" class="text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors">&larr; Back to DevLog</a>
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight mt-6 mb-4">{{ post.title }}</h1>
+        <div class="text-gray-400 text-sm">{{ post.date }}</div>
+    </div>
+
+    <div class="prose prose-lg max-w-none text-gray-600 leading-relaxed" data-aos="fade-up">
+        {{ post.content }}
+    </div>
+</section>
+{% endblock %}

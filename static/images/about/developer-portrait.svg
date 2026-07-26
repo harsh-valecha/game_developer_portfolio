@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#F5F7FB"/>
+  <rect x="180" y="160" width="840" height="880" rx="40" fill="#FFFFFF" stroke="#DCE3EA" stroke-width="8"/>
+  <circle cx="600" cy="430" r="180" fill="#E8C8A8"/>
+  <rect x="430" y="600" width="340" height="280" rx="70" fill="#1F2A44"/>
+  <rect x="470" y="420" width="260" height="220" rx="40" fill="#111827"/>
+  <circle cx="540" cy="500" r="18" fill="#111827"/>
+  <circle cx="660" cy="500" r="18" fill="#111827"/>
+  <path d="M530 575C560 610 620 610 650 575" stroke="#111827" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <rect x="500" y="880" width="200" height="60" rx="20" fill="#4F46E5"/>
+  <text x="600" y="1060" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#111827">Game Architect</text>
+</svg>
