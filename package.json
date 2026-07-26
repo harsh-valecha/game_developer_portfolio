@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "./venv/bin/python app.py",
+    "dev": "python app.py",
     "test": "npx playwright test"
   },
   "keywords": [],

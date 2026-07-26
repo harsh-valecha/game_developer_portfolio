@@ -16,7 +16,7 @@ export default defineConfig({
     reuseExistingServer: true,
   },
   reporter: [
-    ['html', { outputFolder: 'test-artifacts', open: 'never' }],
+    ['html', { outputFolder: 'test-artifacts/html', open: 'never' }],
     ['json', { outputFile: 'test-artifacts/report.json' }],
   ],
 });
